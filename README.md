@@ -6,7 +6,7 @@
 
 ```curl -XPUT -H "Content-Type: application/json" localhost:9200/_bulk --data-binary @movies.json```
 
-# 3.En utilisant les requêtes simples http : 
+### 3.En utilisant les requêtes simples http : 
 
 # 3.1 Recherchez tous les films de Ridley+Scott : que signifient les scores associés à ces films ?
 
