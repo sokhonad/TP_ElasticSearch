@@ -23,7 +23,7 @@ les scores associés à ces films est: 10.3528595
 
 
 #### 4.1
-{
+`{
   "size":10000,
   "query":
       {"query_string": 
