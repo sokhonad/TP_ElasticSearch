@@ -14,16 +14,16 @@
 
 les scores associés à ces films: 10.3528595
 
-// 3.2
+# 3.2
 ```curl -XGET http://localhost:9200/movies/_search?q=Ridley+Scott:fields.directors```
 
-//3.3
+# 3.3
 
 ```curl -XGET http://localhost:9200/movies/_search?q=Ridley+Scott AND fields.actors:Russell+Crowe```
 
 
-//4.1
-```curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/_search' -d'
+# 4.1
+```curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/_search' -d"
 {
   "size":10000,
   "query":
@@ -32,4 +32,4 @@ les scores associés à ces films: 10.3528595
         "query":"Ridley Scott"
       }
     }
-}'```
+}"```
