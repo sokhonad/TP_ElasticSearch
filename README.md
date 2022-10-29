@@ -1,7 +1,8 @@
 # TP_ElasticSearch
 # 2.Importation de données
 
-```Ècurl -H "Content-Type: application/json" -XPOST "http://localhost:9200/mapping/test" -d @mapping.json```
+```curl -H "Content-Type: application/json" -XPOST "http://localhost:9200/mapping/test" -d @mapping.json```
+----
 ```curl -XPUT -H "Content-Type: application/json" localhost:9200/_bulk --data-binary @movies.json```
 
 # 3.En utilisant les requêtes simples http : 
