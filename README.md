@@ -8,16 +8,16 @@
 
 # 3.En utilisant les requêtes simples http : 
 
-# 3.1
+# 3.1 Recherchez tous les films de Ridley+Scott : que signifient les scores associés à ces films ?
 
 ```curl -XGET http://localhost:9200/movies/_search?q=Ridley+Scott```
 
 les scores associés à ces films: 10.3528595
 
-# 3.2
+# 3.2 Refaites cette recherche en précisant qu'il s'agit d'un "directors".
 ```curl -XGET http://localhost:9200/movies/_search?q=Ridley+Scott:fields.directors```
 
-# 3.3
+# 3.3 Modifiez votre requête pour trouver les films de Ridley Scott ayant pour acteur Russell Crowe.
 
 ```curl -XGET http://localhost:9200/movies/_search?q=Ridley+Scott AND fields.actors:Russell+Crowe```
 
