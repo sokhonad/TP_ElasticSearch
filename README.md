@@ -23,13 +23,4 @@ les scores associés à ces films est: 10.3528595
 
 
 #### 4.1
-```curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/_search' -d'
-{
-  "size":10000,
-  "query":
-      {"query_string": 
-         {
-        "query":"Ridley Scott"
-      }
-    }
-}'
+```curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/_search' -d'```
