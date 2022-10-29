@@ -12,7 +12,7 @@
 
 ```curl -XGET http://localhost:9200/movies/_search?q=Ridley+Scott```
 
-les scores associés à ces films: 10.3528595
+les scores associés à ces films est: 10.3528595
 
 #### 3.2 Refaites cette recherche en précisant qu'il s'agit d'un "directors".
 ```curl -XGET http://localhost:9200/movies/_search?q=Ridley+Scott:fields.directors```
