@@ -34,7 +34,7 @@ curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/mov
     }
 }'
 
-----
+
 POST /customer/_doc/1
 {
   "firstname": "Jennifer",
