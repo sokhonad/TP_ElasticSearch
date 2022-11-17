@@ -4,6 +4,7 @@
 ----
 ```sh
 curl -H "Content-Type: application/json" -XPOST `http://localhost:9200/mapping/test" -d @mapping.json'
+```
 
 ```sh
 curl -XPUT -H "Content-Type: application/json" `localhost:9200/_bulk --data-binary @movies.json'
@@ -192,5 +193,5 @@ fields.release_date >= 1950 and fields.directors : "Ridley Scott"
 
 ## Visualisation :
 
-![Générer un "camembert" (régionalisation des exercices)](gi.png)
+![Générer un "camembert" (régionalisation des exercices)](image.png)
 
