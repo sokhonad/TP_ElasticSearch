@@ -182,6 +182,7 @@ fields.release_date >= 1950
 fields.release_date >= 1950 and fields.directors : "Ridley Scott"
 ```
 
-##Visualisation :
+## Visualisation :
+
 ![Générer un "camembert" (régionalisation des exercices)](gi.png)
 
