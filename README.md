@@ -41,3 +41,17 @@ curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/mov
   "lastname": "Walters"
 }``
 
+```sh
+curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/movie/_search?pretty' -d '
+{ 
+  "size":10000,
+  "query": {
+        "query_string":
+        {
+           "query" : "Ridley Scott"
+        }
+  }
+}
+'
+```
+
