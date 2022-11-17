@@ -4,10 +4,10 @@
 ----
 ```sh
 curl -H "Content-Type: application/json" -XPOST `http://localhost:9200/mapping/test" -d @mapping.json'
+
 ```sh
 curl -XPUT -H "Content-Type: application/json" `localhost:9200/_bulk --data-binary @movies.json'
-```sh
-
+```
 ### 3.En utilisant les requêtes simples http : 
 
 #### 3.1 Recherchez tous les films de Ridley+Scott : que signifient les scores associés à ces films ?
