@@ -3,9 +3,9 @@
 
 ----
 ```sh
-curl -H "Content-Type: application/json" -XPOST "http://localhost:9200/mapping/test" -d @mapping.json'
+curl -H "Content-Type: application/json" -XPOST `http://localhost:9200/mapping/test" -d @mapping.json'
 ```sh
-curl -XPUT -H "Content-Type: application/json" localhost:9200/_bulk --data-binary @movies.json'
+curl -XPUT -H "Content-Type: application/json" `localhost:9200/_bulk --data-binary @movies.json'
 ```sh
 
 ### 3.En utilisant les requêtes simples http : 
@@ -13,20 +13,20 @@ curl -XPUT -H "Content-Type: application/json" localhost:9200/_bulk --data-binar
 #### 3.1 Recherchez tous les films de Ridley+Scott : que signifient les scores associés à ces films ?
 
 ```sh
-curl -XGET http://localhost:9200/movies/_search?q=Ridley+Scott'
+curl -XGET `http://localhost:9200/movies/_search?q=Ridley+Scott'
 ```
 
 les scores associés à ces films est: 10.3528595
 
 #### 3.2 Refaites cette recherche en précisant qu'il s'agit d'un "directors".
 ```sh
-curl -XGET http://localhost:9200/movies/_search?q=Ridley+Scott:fields.directors'
+curl -XGET `http://localhost:9200/movies/_search?q=Ridley+Scott:fields.directors'
 ```
 
 #### 3.3 Modifiez votre requête pour trouver les films de Ridley Scott ayant pour acteur Russell Crowe.
 
 ```sh 
-curl -XGET http://localhost:9200/movies/_search?q=Ridley+Scott AND fields.actors:Russell+Crowe'
+curl -XGET `http://localhost:9200/movies/_search?q=Ridley+Scott AND fields.actors:Russell+Crowe'
 ```
 
 
