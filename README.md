@@ -28,7 +28,7 @@ les scores associés à ces films est: 10.3528595
  
 4.1.1.Recherchez tous les films de Ridley Scott :
 ```sh
-curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/movie/_search?pretty' -d '
+curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/_search?pretty' -d '
 { 
   "size":10000,
   "query": {
@@ -42,7 +42,7 @@ curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/mov
 ```
 4.1.2.Refaites cette recherche en précisant qu'il s'agit d'un "directors":
 ```sh
-curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/movie/_search?pretty' -d '
+curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/_search?pretty' -d '
 { 
   "query" : {
       "match":{
@@ -54,7 +54,7 @@ curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/mov
 ```
 4.1.3.Modifiez votre requête pour trouver les films de Ridley Scott ayant pour acteur Russell Crowe :
 ```sh
-curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/movie/_search?pretty' -d '
+curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/_search?pretty' -d '
 { 
   "query" : {
       "bool": {
@@ -70,7 +70,7 @@ curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/mov
 ```
 4.2.Recherchez tous les films de Ridley Scott dont le "rank" est inférieur à 2000
 ```sh
-curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/movie/_search?pretty' -d '
+curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/_search?pretty' -d '
 { "query" : {
      "bool": {
           "must" : [
@@ -84,7 +84,7 @@ curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/mov
 ```
 4.3.Recherchez tous les films de Ridley Scott de score (rating) supérieur à 6 et qui soient du genre "Adventure":
 ```sh
-curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/movie/_search?pretty' -d '
+curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/_search?pretty' -d '
 { "query" : {
      "bool": {
           "must" : [
@@ -101,7 +101,7 @@ curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/mov
 
 5.1.Écrivez une requête json permettant de compter le nombre de films produits par année:
 ```sh
-curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/movie/_search?pretty' -d '
+curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/_search?pretty' -d '
 { 
   "aggs" : {
       "nb_par_annee" : {
@@ -113,7 +113,7 @@ curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/mov
 ```
 5.2.Donnez le "rank" moyen et la note moyenne des films de Ridley Scott:
 ```sh
-curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/movie/_search?pretty' -d '
+curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/_search?pretty' -d '
 { 
   "query" : {
       "match": {"fields.directors" : "Ridley Scott"}
@@ -132,7 +132,7 @@ curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/mov
 
 5.3.Donnez la note moyenne de tous les films par année, en les ordonnant par note de la plus grande vers la plus petite:
 ```sh
-curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/movie/_search?pretty' -d '
+curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/_search?pretty' -d '
 { 
   "aggs" : {
       "group_year" : {
@@ -151,7 +151,7 @@ curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/mov
 
 5.4.En utilisant "group_range", donnez le nombre de films ayant une note inférieure à 2, entre 3 et 5, et supérieure à 7:
 ```sh
-curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/movie/_search?pretty' -d '
+curl -XGET -H "Content-type: application/json" 'http://localhost:9200/movies/_search?pretty' -d '
 { 
   "aggs" : {
       "group_range" : {
