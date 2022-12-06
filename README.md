@@ -1,4 +1,4 @@
-# TP_ElasticSearch: Sokhona Diakarou et Ndiaye Mamel Alboury 
+# TP_ElasticSearch: Sokhona Diakarou 
 # 2.Importation de données
 
 ----
